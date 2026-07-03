@@ -1,14 +1,48 @@
 import { Routes, Route } from "react-router-dom";
 
-import MainLayout from "../../components/layout/MainLayout";
-import HomePage from "../../features/home/pages/HomePage";
-import NotFound from "../../pages/NotFound";
+import MainLayout from "@/components/layout/MainLayout";
+
+import HomePage from "@/features/home/pages/HomePage";
+
+import LoginPage from "@/features/auth/pages/LoginPage";
+import RegisterPage from "@/features/auth/pages/RegisterPage";
+
+import CategoriesPage from "@/features/products/pages/CategoriesPage";
+import WishlistPage from "@/features/wishlist/pages/WishlistPage";
+import PostAdPage from "@/features/products/pages/PostAdPage";
+
+import NotFound from "@/pages/NotFound";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
+
+        <Route
+          path="/categories"
+          element={<CategoriesPage />}
+        />
+
+        <Route
+          path="/wishlist"
+          element={<WishlistPage />}
+        />
+
+        <Route
+          path="/login"
+          element={<LoginPage />}
+        />
+
+        <Route
+          path="/register"
+          element={<RegisterPage />}
+        />
+
+        <Route
+          path="/post-ad"
+          element={<PostAdPage />}
+        />
       </Route>
 
       <Route path="*" element={<NotFound />} />
