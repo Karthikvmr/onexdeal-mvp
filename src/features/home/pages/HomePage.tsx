@@ -1,7 +1,13 @@
-import Hero from "../components/hero";
+import Hero from "../components/Hero";
+import QuickSearch from "../components/QuickSearch";
 
 const HomePage = () => {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <QuickSearch />
+    </>
+  );
 };
 
 export default HomePage;
