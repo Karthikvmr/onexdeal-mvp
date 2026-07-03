@@ -1,6 +1,6 @@
 const HeroIllustration = () => {
   return (
-    <div className="flex h-[420px] items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white shadow-sm">
+    <div className="flex h-420 items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white shadow-sm">
       <div className="text-center">
         <div className="text-7xl">🛍️</div>
 

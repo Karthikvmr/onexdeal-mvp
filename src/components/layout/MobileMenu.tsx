@@ -14,7 +14,7 @@ import { NAVIGATION } from "@/constants/navigation";
 const MobileMenu = () => {
   return (
     <Sheet>
-      <SheetTrigger asChild>
+      <SheetTrigger >
         <Button
           variant="ghost"
           size="icon"
