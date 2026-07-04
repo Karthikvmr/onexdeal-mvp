@@ -28,7 +28,6 @@ const CTASection = () => {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button
-                    asChild
                   size="lg"
                   variant="secondary"
                 >
@@ -39,7 +38,6 @@ const CTASection = () => {
                 </Button>
 
                 <Button
-                  asChild
                   size="lg"
                   variant="outline"
                   className="border-white bg-transparent text-white hover:bg-white hover:text-blue-700"

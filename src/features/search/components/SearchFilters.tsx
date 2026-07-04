@@ -1,49 +1,101 @@
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+const categories = [
+  "Mobiles",
+  "Cars",
+  "Electronics",
+  "Furniture",
+];
+
+const conditions = [
+  "New",
+  "Like New",
+  "Good",
+  "Fair",
+];
+
 const SearchFilters = () => {
   return (
-    <aside className="rounded-2xl border bg-white p-6">
-      <h2 className="text-lg font-semibold">
-        Filters
-      </h2>
+    <aside className="rounded-2xl border bg-white p-6 shadow-sm">
+      <div className="mb-6 flex items-center justify-between">
+        <h2 className="text-xl font-semibold">
+          Filters
+        </h2>
 
-      <div className="mt-6 space-y-6">
+        <Button
+          variant="ghost"
+          size="sm"
+        >
+          Clear
+        </Button>
+      </div>
+
+      <div className="space-y-8">
         <div>
-          <label className="mb-2 block text-sm font-medium">
+          <h3 className="mb-4 font-medium">
             Category
-          </label>
+          </h3>
 
-          <select className="w-full rounded-lg border p-2">
-            <option>All</option>
-            <option>Mobiles</option>
-            <option>Cars</option>
-            <option>Electronics</option>
-          </select>
+          <div className="space-y-3">
+            {categories.map((item) => (
+              <label
+                key={item}
+                className="flex items-center gap-3"
+              >
+                <Checkbox />
+
+                <span>{item}</span>
+              </label>
+            ))}
+          </div>
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">
+          <h3 className="mb-4 font-medium">
             Condition
-          </label>
+          </h3>
 
-          <select className="w-full rounded-lg border p-2">
-            <option>All</option>
-            <option>New</option>
-            <option>Like New</option>
-            <option>Good</option>
-          </select>
+          <div className="space-y-3">
+            {conditions.map((item) => (
+              <label
+                key={item}
+                className="flex items-center gap-3"
+              >
+                <Checkbox />
+
+                <span>{item}</span>
+              </label>
+            ))}
+          </div>
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">
-            Price
-          </label>
+          <h3 className="mb-4 font-medium">
+            Location
+          </h3>
 
-          <input
-            type="range"
-            className="w-full"
+          <Input placeholder="Enter city" />
+        </div>
+
+        <div>
+          <h3 className="mb-4 font-medium">
+            Max Price
+          </h3>
+
+          <Input
+            type="number"
+            placeholder="50000"
           />
         </div>
+
+        <Button className="w-full">
+          Apply Filters
+        </Button>
       </div>
     </aside>
   );
 };
+
 export default SearchFilters;
