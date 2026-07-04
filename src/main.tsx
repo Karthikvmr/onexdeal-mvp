@@ -13,6 +13,7 @@ import AuthProvider from "@/providers/AuthProviders.tsx";
 import ThemeProvider from "@/features/theme/providers/ThemeProvider";
 
 import "./index.css";
+import { Toaster } from "sonner";
 
 ReactDOM.createRoot(
   document.getElementById("root")!
@@ -24,6 +25,12 @@ ReactDOM.createRoot(
         <AuthProvider>
           <ThemeProvider>
             <App />
+            <Toaster
+    richColors
+    position="top-right"
+    closeButton
+    duration={3000}
+  />
           </ThemeProvider>
         </AuthProvider>
       </QueryProvider>

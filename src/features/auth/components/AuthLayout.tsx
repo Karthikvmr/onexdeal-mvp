@@ -15,7 +15,7 @@ const AuthLayout = ({
     <section className="flex min-h-[calc(100vh-80px)] items-center bg-slate-50 py-16">
       <div className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-3xl bg-white shadow-xl lg:grid-cols-2">
         {/* Left */}
-        <div className="hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 p-12 text-white lg:flex lg:flex-col lg:justify-center">
+        <div className="hidden bg-linear-to-br from-blue-600 via-blue-700 to-indigo-700 p-12 text-white lg:flex lg:flex-col lg:justify-center">
           <h2 className="text-5xl font-bold">
             OneXDeal
           </h2>

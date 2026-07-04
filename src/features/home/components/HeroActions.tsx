@@ -1,26 +1,28 @@
-import { Link } from "react-router-dom";
+import HeroActions from "./HeroActions";
+import HeroStats from "./HeroStats";
 
-import { Button } from "@/components/ui/button";
-
-const HeroActions = () => {
+const HeroContent = () => {
   return (
-    <div className="mt-8 flex flex-wrap gap-4">
-      <Button size="lg">
-        <Link to="/search">
-          Explore Marketplace
-        </Link>
-      </Button>
+    <>
+      <span className="inline-flex rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-700">
+        🚀 New Marketplace Experience
+      </span>
 
-      <Button
-        variant="outline"
-        size="lg"
-      >
-        <Link to="/post-ad">
-          Post an Ad
-        </Link>
-      </Button>
-    </div>
+      <h1 className="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-slate-900 lg:text-6xl">
+        Buy. Sell.
+        <span className="text-blue-600"> Discover.</span>
+      </h1>
+
+      <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+        OneXDeal helps you discover amazing deals, sell products quickly,
+        and connect with trusted buyers in your city.
+      </p>
+
+      <HeroActions />
+
+      <HeroStats />
+    </>
   );
 };
 
-export default HeroActions;
+export default HeroContent;

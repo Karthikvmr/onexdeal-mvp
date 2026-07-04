@@ -8,7 +8,7 @@ const CTASection = () => {
   return (
     <section className="py-20">
       <Container>
-        <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 px-8 py-14 text-white lg:px-16">
+        <div className="overflow-hidden rounded-3xl bg-linear-to-r from-blue-600 via-blue-700 to-indigo-700 px-8 py-14 text-white lg:px-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <span className="rounded-full bg-white/20 px-4 py-2 text-sm font-medium">

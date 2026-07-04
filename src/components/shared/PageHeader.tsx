@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({
   title,
-  description
+  description,
   action,
 }: PageHeaderProps) => {
   return (
