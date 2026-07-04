@@ -1,6 +1,8 @@
-import Hero from "../components/Hero";
+import Hero from "../components/hero";
 import QuickSearch from "../components/QuickSearch";
 import CategoriesSection from "../components/CategoriesSection";
+
+import FeaturedProducts from "@/features/products/components/FeaturedProducts";
 
 const HomePage = () => {
   return (
@@ -8,6 +10,7 @@ const HomePage = () => {
       <Hero />
       <QuickSearch />
       <CategoriesSection />
+      <FeaturedProducts />
     </>
   );
 };
