@@ -4,12 +4,15 @@ import { Badge } from "@/components/ui/badge";
 
 import type { Product } from "../types/product";
 
+import { Link } from "react-router-dom";
+
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
+    <Link to={`/products/${product.id}`}>
     <article className="group overflow-hidden rounded-2xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative">
         <img
@@ -46,6 +49,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </p>
       </div>
     </article>
+    </Link>
   );
 };
 export default ProductCard;

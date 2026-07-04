@@ -13,6 +13,7 @@ import PostAdPage from "@/features/products/pages/PostAdPage";
 
 import NotFound from "@/pages/NotFound";
 import SearchPage from "@/features/search/pages/SearchPage";
+import ProductDetailsPage from "@/features/products/pages/ProductDetailsPage";
 
 const AppRouter = () => {
   return (
@@ -29,6 +30,11 @@ const AppRouter = () => {
           path="/categories"
           element={<CategoriesPage />}
         />
+
+          <Route
+    path="/products/:id"
+    element={<ProductDetailsPage />}
+    />
 
         <Route
           path="/wishlist"
