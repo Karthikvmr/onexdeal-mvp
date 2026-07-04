@@ -12,12 +12,18 @@ import WishlistPage from "@/features/wishlist/pages/WishlistPage";
 import PostAdPage from "@/features/products/pages/PostAdPage";
 
 import NotFound from "@/pages/NotFound";
+import SearchPage from "@/features/search/pages/SearchPage";
 
 const AppRouter = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
+
+        <Route
+    path="/search"
+    element={<SearchPage />}
+  />
 
         <Route
           path="/categories"

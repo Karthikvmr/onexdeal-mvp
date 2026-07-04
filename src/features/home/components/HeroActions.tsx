@@ -6,7 +6,7 @@ const HeroActions = () => {
   return (
     <div className="mt-8 flex flex-wrap gap-4">
       <Button size="lg">
-        <Link to="/categories">
+        <Link to="/search">
           Explore Marketplace
         </Link>
       </Button>

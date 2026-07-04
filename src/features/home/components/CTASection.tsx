@@ -28,7 +28,7 @@ const CTASection = () => {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button
-                  asChild
+                    asChild
                   size="lg"
                   variant="secondary"
                 >
