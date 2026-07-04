@@ -5,6 +5,7 @@ import Logo from "@/components/common/Logo";
 import SearchBar from "@/components/common/SearchBar";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+import ThemeToggle from "@/features/theme/components/ThemeToggle";
 
 import { Button } from "@/components/ui/button";
 
@@ -24,7 +25,9 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <NavLinks />
-
+          
+          <ThemeToggle />
+          
           {/* Desktop Actions */}
           <div className="hidden items-center gap-3 lg:flex">
             <Link to="/login">

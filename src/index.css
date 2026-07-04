@@ -1,21 +1,15 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: Inter, system-ui, sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
+  @apply bg-slate-50 text-slate-900 transition-colors duration-300;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+.dark body {
+  @apply bg-slate-950 text-slate-100;
 }
