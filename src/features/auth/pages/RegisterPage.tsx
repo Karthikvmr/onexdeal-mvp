@@ -1,14 +1,14 @@
+import AuthLayout from "../components/AuthLayout";
+import RegisterForm from "../components/RegisterForm";
+
 const RegisterPage = () => {
   return (
-    <section className="py-24">
-      <div className="mx-auto max-w-xl text-center">
-        <h1 className="text-4xl font-bold">Register</h1>
-
-        <p className="mt-4 text-slate-500">
-          Registration page coming soon.
-        </p>
-      </div>
-    </section>
+    <AuthLayout
+      title="Create Account"
+      subtitle="Start buying and selling on OneXDeal."
+    >
+      <RegisterForm />
+    </AuthLayout>
   );
 };
 
