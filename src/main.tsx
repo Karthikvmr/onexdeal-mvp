@@ -8,6 +8,7 @@ import QueryProvider from "./providers/QueryProviders.tsx";
 import { Provider } from "react-redux";
 
 import { store } from "@/app/store";
+import AuthProvider from "@/providers/AuthProviders.tsx";
 
 import "./index.css";
 
@@ -18,7 +19,9 @@ ReactDOM.createRoot(
     <Provider store={store}>
     <BrowserRouter>
       <QueryProvider>
+        <AuthProvider>
           <App />
+        </AuthProvider>
       </QueryProvider>
     </BrowserRouter>
     </Provider>

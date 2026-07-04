@@ -15,6 +15,8 @@ import NotFound from "@/pages/NotFound";
 import SearchPage from "@/features/search/pages/SearchPage";
 import ProductDetailsPage from "@/features/products/pages/ProductDetailsPage";
 import DashboardPage from "@/pages/DashboardPage";
+import ProtectedRoute from "@/features/auth/components/ProtectedRoute";
+import PublicRoute from "@/features/auth/components/PublicRoute";
 
 const AppRouter = () => {
   return (
@@ -37,25 +39,29 @@ const AppRouter = () => {
     element={<ProductDetailsPage />}
     />
 
+    <Route element={<ProtectedRoute />}>
         <Route
     path="/dashboard"
     element={<DashboardPage />}
   />
+  </Route>
 
         <Route
           path="/wishlist"
           element={<WishlistPage />}
         />
-
-        <Route
-          path="/login"
-          element={<LoginPage />}
-        />
-
+      
+        <Route element={<PublicRoute />}>
+          <Route
+            path="/login"
+            element={<LoginPage />}
+          />
+        
         <Route
           path="/register"
           element={<RegisterPage />}
         />
+        </Route>
 
         <Route
           path="/post-ad"

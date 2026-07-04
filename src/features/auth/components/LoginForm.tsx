@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useNavigate } from "react-router-dom";
+
+import { useAppDispatch } from "@/app/store/hooks";
+import { loginSuccess } from "../store/authSlice";
+import { tokenStorage } from "../utils/token";
+
 import {
   loginSchema,
   type LoginFormData,
@@ -14,6 +20,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 const LoginForm = () => {
+
+    const navigate = useNavigate();
+const dispatch = useAppDispatch();
   const [showPassword, setShowPassword] = useState(false);
 
   const {
@@ -24,13 +33,24 @@ const LoginForm = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = async (data: LoginFormData) => {
-    console.log(data);
+  const onSubmit = async () => {
+  const fakeToken = "demo-access-token";
 
-    await new Promise((resolve) =>
-      setTimeout(resolve, 1500)
-    );
-  };
+  tokenStorage.set(fakeToken);
+
+  dispatch(
+    loginSuccess({
+      accessToken: fakeToken,
+      user: {
+        id: 1,
+        name: "Karthik",
+        email: "karthik@example.com",
+      },
+    })
+  );
+
+  navigate("/dashboard");
+};
 
   return (
     <form
