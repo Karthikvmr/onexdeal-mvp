@@ -14,6 +14,7 @@ import PostAdPage from "@/features/products/pages/PostAdPage";
 import NotFound from "@/pages/NotFound";
 import SearchPage from "@/features/search/pages/SearchPage";
 import ProductDetailsPage from "@/features/products/pages/ProductDetailsPage";
+import DashboardPage from "@/pages/DashboardPage";
 
 const AppRouter = () => {
   return (
@@ -35,6 +36,11 @@ const AppRouter = () => {
     path="/products/:id"
     element={<ProductDetailsPage />}
     />
+
+        <Route
+    path="/dashboard"
+    element={<DashboardPage />}
+  />
 
         <Route
           path="/wishlist"
