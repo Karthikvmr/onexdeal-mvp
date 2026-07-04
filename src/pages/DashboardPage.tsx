@@ -8,6 +8,8 @@ import {
 import DashboardHeader from "@/features/dashboard/components/DashboardHeader";
 import DashboardLayout from "@/features/dashboard/components/DashboardLayout";
 import StatCard from "@/features/dashboard/components/StateCard";
+import ListingTable from "@/features/dashboard/components/ListingTable";
+import QuickActions from "@/features/dashboard/components/QuickActions";
 
 const DashboardPage = () => {
   return (
@@ -39,6 +41,10 @@ const DashboardPage = () => {
             value="₹84K"
             icon={IndianRupee}
           />
+
+          <ListingTable />
+          <QuickActions />
+          
         </div>
       </div>
     </DashboardLayout>
