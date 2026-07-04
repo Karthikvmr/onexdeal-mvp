@@ -3,9 +3,10 @@ import SectionHeader from "@/features/home/components/SectionHeader";
 
 import ProductCard from "./ProductCard";
 
-import { PRODUCTS } from "../constants/products";
+import { useProducts } from "@/hooks/useProducts";
 
 const FeaturedProducts = () => {
+    const { data: products = [] } = useProducts();
   return (
     <section className="py-20 bg-slate-50">
       <Container>
@@ -17,7 +18,7 @@ const FeaturedProducts = () => {
         />
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {PRODUCTS.map((product) => (
+          {products.map((product) => (
             <ProductCard
               key={product.id}
               product={product}

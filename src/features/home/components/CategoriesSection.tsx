@@ -3,9 +3,10 @@ import Container from "@/components/common/Container";
 import CategoryCard from "./CategoryCard";
 import SectionHeader from "./SectionHeader";
 
-import { CATEGORIES } from "../constants/categories";
+import { useCategories } from "@/hooks/useCategories";
 
 const CategoriesSection = () => {
+    const { data: categories = [] } = useCategories();
   return (
     <section className="py-20">
       <Container>
@@ -17,7 +18,7 @@ const CategoriesSection = () => {
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {CATEGORIES.map((category) => (
+          {categories.map((category) => (
             <CategoryCard
               key={category.id}
               category={category}
